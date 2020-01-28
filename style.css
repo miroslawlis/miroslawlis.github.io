@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+html {
+    background-color: #432d3a;
+    color           : #fff;
+    text-align      : center;
+    font-family     : 'Consolas';
+
+}
+
+h1 {
+
+    /* background                : linear-gradient(to right, #16ff27 0%, #ca0000 100%); */
+    background-clip              : text;
+    -webkit-background-clip      : text;
+    -webkit-text-fill-color      : transparent;
+    color                        : #1e8b1e;
+    font-family                  : 'Press Start 2P';
+}
+
+#name h1 {
+    background             : linear-gradient(110deg, #16ff27 33%, rgba(0, 0, 0, 0) 33%), linear-gradient(110deg, #fcb92a 34%, #c02929 34%);
+    background-size        : 400%;
+    -webkit-text-fill-color: transparent;
+    background-clip        : text;
+    -webkit-background-clip: text;
+}
+
+#name h1 {
+    animation        : Gradient 5s ease infinite;
+    -webkit-animation: Gradient 5s ease infinite;
+    -moz-animation   : Gradient 5s ease infinite;
+}
+
+@keyframes Gradient {
+    0% {
+        background-position: 30% 50%
+    }
+
+    50% {
+        background-position: 25% 50%
+    }
+
+    100% {
+        background-position: 30% 50%
+    }
+
+}
+
+h3 {
+    color      : #ac3425;
+    font-family: 'Press Start 2P';
+}
+
+#description {
+    margin-top: 2vw;
+}
+
+#portfoliourls {
+    display       : flex;
+    flex-direction: column;
+    margin        : 3vw auto auto auto;
+}
+
+#portfoliourls .item {
+    padding: 2vw 0 0 0;
+    width  : 100%;
+    display: block;
+}
+
+#portfoliourls .item a.title {
+    padding        : 0.5vw 0;
+    display        : block;
+    font-family    : 'Press Start 2P';
+    text-shadow    : 0 0 10px #000000;
+    text-decoration: none;
+    color          : #3180cc;
+}
+
+
+#portfoliourls .info {
+    padding: 0.5vw;
+}
+
+#portfoliourls .item .info a {
+    text-decoration: none;
+    color          : #fff;
+    padding        : 0.5vw;
+    transition: all ease 0.5s;
+}
+
+#portfoliourls .item .info a:hover {
+    color: #ac3425;
+    transition: all ease 0.5s;
+}
+
+footer h5 {
+    margin-top: 3vw;
+}
+
+footer .item img {
+    height: 2vw;
+    width : auto;
+}
+
+@media all and (min-width: 1000px) {
+
+    html {
+        font-size: 1vw;
+    }
+
+    h1 {
+        font-size: 3vw;
+    }
+
+    h3 {
+        font-size: 1.3vw;
+    }
+}
+
+@media all and (max-width: 999px) and (min-width: 400px) {
+
+    html {
+        font-size: 3vw;
+    }
+
+    h1 {
+        font-size: 4vw;
+    }
+
+    h3 {
+        font-size: 3vw;
+    }
+}
+
+@media all and (max-width: 399px) {
+
+    html {
+        font-size: 5vw;
+    }
+
+    h1 {
+        font-size: 7vw;
+    }
+
+    h3 {
+        font-size: 6vw;
+    }
+}
