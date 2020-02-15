@@ -98,10 +98,7 @@ footer h5 {
     margin-top: 3vw;
 }
 
-footer .item img {
-    height: 2vw;
-    width : auto;
-}
+
 
 @media all and (min-width: 1000px) {
 
@@ -116,6 +113,12 @@ footer .item img {
     h3 {
         font-size: 1.3vw;
     }
+    
+    footer .item img {
+    height: 2vw;
+    width : auto;
+}
+    
 }
 
 @media all and (max-width: 999px) and (min-width: 400px) {
@@ -131,6 +134,10 @@ footer .item img {
     h3 {
         font-size: 3vw;
     }
+    footer .item img {
+    height: 9vw;
+    width : auto;
+}
 }
 
 @media all and (max-width: 399px) {
@@ -146,4 +153,8 @@ footer .item img {
     h3 {
         font-size: 6vw;
     }
+    footer .item img {
+    height: 9vw;
+    width : auto;
+}
 }
