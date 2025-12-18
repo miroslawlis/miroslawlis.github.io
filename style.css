@@ -1,15 +1,54 @@
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
 
+/* Dark mode (default) */
 html {
     background-color: #432d3a;
     color           : #fff;
     text-align      : center;
     font-family     : 'Consolas';
+}
 
+/* Light mode */
+@media (prefers-color-scheme: light) {
+    html {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+    #portfoliourls .item a.title {
+        text-shadow: 0 0 10px #ffffff;
+    }
+
+    #portfoliourls .item .info a {
+        color: #333333;
+    }
+
+    #portfoliourls .item .info a:hover {
+        color: #ac3425;
+    }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    html {
+        background-color: #432d3a;
+        color: #fff;
+    }
+
+    #portfoliourls .item a.title {
+        text-shadow: 0 0 10px #000000;
+    }
+
+    #portfoliourls .item .info a {
+        color: #fff;
+    }
+
+    #portfoliourls .item .info a:hover {
+        color: #ac3425;
+    }
 }
 
 h1 {
-
     /* background                : linear-gradient(to right, #16ff27 0%, #ca0000 100%); */
     background-clip              : text;
     -webkit-background-clip      : text;
