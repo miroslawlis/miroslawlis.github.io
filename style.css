@@ -1,199 +1,171 @@
-@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
 
-/* Dark mode (default) */
-html {
-    background-color: #432d3a;
-    color           : #fff;
-    text-align      : center;
-    font-family     : 'Consolas';
+/* CSS Variables for theming */
+:root {
+  --bg-color: #432d3a;
+  --text-color: #fff;
+  --link-color: #0066cc;
+  --link-hover-color: #ac3425;
+  --title-link-color: #3180cc;
+  --heading-color: #ac3425;
+  --text-shadow: 0 0 10px #000000;
 }
 
-/* Light mode */
 @media (prefers-color-scheme: light) {
-    html {
-        background-color: #ffffff;
-        color: #000000;
-    }
-
-    #portfoliourls .item a.title {
-        text-shadow: 0 0 10px #ffffff;
-    }
-
-    #portfoliourls .item .info a {
-        color: #333333;
-    }
-
-    #portfoliourls .item .info a:hover {
-        color: #ac3425;
-    }
+  :root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --link-color: #0066cc;
+    --link-hover-color: #ac3425;
+    --title-link-color: #0052a3;
+    --heading-color: #ac3425;
+    --text-shadow: 0 0 10px #ffffff;
+  }
 }
 
-/* Dark mode */
-@media (prefers-color-scheme: dark) {
-    html {
-        background-color: #432d3a;
-        color: #fff;
-    }
-
-    #portfoliourls .item a.title {
-        text-shadow: 0 0 10px #000000;
-    }
-
-    #portfoliourls .item .info a {
-        color: #fff;
-    }
-
-    #portfoliourls .item .info a:hover {
-        color: #ac3425;
-    }
+/* Base styles */
+html {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  text-align: center;
+  font-family: "Consolas", monospace;
 }
 
 h1 {
-    /* background                : linear-gradient(to right, #16ff27 0%, #ca0000 100%); */
-    background-clip              : text;
-    -webkit-background-clip      : text;
-    -webkit-text-fill-color      : transparent;
-    color                        : #1e8b1e;
-    font-family                  : 'Press Start 2P';
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #1e8b1e;
+  font-family: "Press Start 2P", cursive;
 }
 
 #name h1 {
-    background             : linear-gradient(110deg, #16ff27 33%, rgba(0, 0, 0, 0) 33%), linear-gradient(110deg, #fcb92a 34%, #c02929 34%);
-    background-size        : 400%;
-    -webkit-text-fill-color: transparent;
-    background-clip        : text;
-    -webkit-background-clip: text;
+  background: linear-gradient(110deg, #16ff27 33%, rgba(0, 0, 0, 0) 33%), linear-gradient(110deg, #fcb92a 34%, #c02929 34%);
+  background-size: 400%;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: gradient 5s ease infinite;
 }
 
-#name h1 {
-    animation        : Gradient 5s ease infinite;
-    -webkit-animation: Gradient 5s ease infinite;
-    -moz-animation   : Gradient 5s ease infinite;
-}
-
-@keyframes Gradient {
-    0% {
-        background-position: 30% 50%
-    }
-
-    50% {
-        background-position: 25% 50%
-    }
-
-    100% {
-        background-position: 30% 50%
-    }
-
+@keyframes gradient {
+  0% {
+    background-position: 30% 50%;
+  }
+  50% {
+    background-position: 25% 50%;
+  }
+  100% {
+    background-position: 30% 50%;
+  }
 }
 
 h3 {
-    color      : #ac3425;
-    font-family: 'Press Start 2P';
+  color: var(--heading-color);
+  font-family: "Press Start 2P", cursive;
 }
 
 #description {
-    margin-top: 2vw;
+  margin-top: 2vw;
+  line-height: 1.5;
 }
 
+/* Portfolio section */
 #portfoliourls {
-    display       : flex;
-    flex-direction: column;
-    margin        : 3vw auto auto auto;
+  display: flex;
+  flex-direction: column;
+  margin: 3vw auto 0;
 }
 
 #portfoliourls .item {
-    padding: 2vw 0 0 0;
-    width  : 100%;
-    display: block;
+  padding: 2vw 0 0;
+  width: 100%;
+  display: block;
 }
 
 #portfoliourls .item a.title {
-    padding        : 0.5vw 0;
-    display        : block;
-    font-family    : 'Press Start 2P';
-    text-shadow    : 0 0 10px #000000;
-    text-decoration: none;
-    color          : #3180cc;
+  padding: 0.5vw 0;
+  display: block;
+  font-family: "Press Start 2P", cursive;
+  text-shadow: var(--text-shadow);
+  text-decoration: none;
+  color: var(--title-link-color);
 }
 
-
 #portfoliourls .info {
-    padding: 0.5vw;
+  padding: 0.5vw;
 }
 
 #portfoliourls .item .info a {
-    text-decoration: none;
-    color          : #fff;
-    padding        : 0.5vw;
-    transition: all ease 0.5s;
+  text-decoration: none;
+  color: var(--link-color);
+  padding: 0.5vw;
+  transition: color 0.3s ease;
 }
 
 #portfoliourls .item .info a:hover {
-    color: #ac3425;
-    transition: all ease 0.5s;
+  color: var(--link-hover-color);
 }
 
+/* Footer */
 footer h5 {
-    margin-top: 3vw;
+  margin-top: 3vw;
 }
 
+/* Responsive typography */
+@media (min-width: 1000px) {
+  html {
+    font-size: 1vw;
+  }
 
+  h1 {
+    font-size: 3vw;
+  }
 
-@media all and (min-width: 1000px) {
+  h3 {
+    font-size: 1.3vw;
+  }
 
-    html {
-        font-size: 1vw;
-    }
-
-    h1 {
-        font-size: 3vw;
-    }
-
-    h3 {
-        font-size: 1.3vw;
-    }
-    
-    footer .item img {
+  footer .item img {
     height: 2vw;
-    width : auto;
+    width: auto;
+  }
 }
-    
-}
 
-@media all and (max-width: 999px) and (min-width: 400px) {
+@media (min-width: 400px) and (max-width: 999px) {
+  html {
+    font-size: 3vw;
+  }
 
-    html {
-        font-size: 3vw;
-    }
+  h1 {
+    font-size: 4vw;
+  }
 
-    h1 {
-        font-size: 4vw;
-    }
+  h3 {
+    font-size: 3vw;
+  }
 
-    h3 {
-        font-size: 3vw;
-    }
-    footer .item img {
+  footer .item img {
     height: 9vw;
-    width : auto;
+    width: auto;
+  }
 }
-}
 
-@media all and (max-width: 399px) {
+@media (max-width: 399px) {
+  html {
+    font-size: 5vw;
+  }
 
-    html {
-        font-size: 5vw;
-    }
+  h1 {
+    font-size: 7vw;
+  }
 
-    h1 {
-        font-size: 7vw;
-    }
+  h3 {
+    font-size: 6vw;
+  }
 
-    h3 {
-        font-size: 6vw;
-    }
-    footer .item img {
+  footer .item img {
     height: 9vw;
-    width : auto;
-}
+    width: auto;
+  }
 }
